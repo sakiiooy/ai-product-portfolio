@@ -1,0 +1,1 @@
+{"name":"chengce-stock-intent","version":"1.0.0","type":"module","private":true,"description":"可检查的自然语言选股与策略解释器","scripts":{"build":"node scripts/build.mjs","dev":"node scripts/dev.mjs","test":"node --test tests/*.test.mjs"},"engines":{"node":">=20"}}

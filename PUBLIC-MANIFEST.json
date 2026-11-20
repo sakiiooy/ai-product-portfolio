@@ -1,0 +1,558 @@
+{
+  "prepared_at": "2026-11-20",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 55,
+      "sha256": "3fc91d1afd7521ae190ec5e326996ef3b21c5aa7eaa07489a832425ba948480c",
+      "git_blob_sha": "4b68f07b145929b2e3fa6dd0c537c281726b2866"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2447,
+      "sha256": "870d4318caafdbe9541ee5fafe6548c43f59cab6f80768dc338e4f7b86a30d48",
+      "git_blob_sha": "9293e9d804f0e438b8d585ea63b21759e3eb3407"
+    },
+    {
+      "path": "projects/README.md",
+      "bytes": 2207,
+      "sha256": "3c0d77f75289f74cb23fe26ba57d205ba57d4d0dfd0090fd1cafe2e41a678d46",
+      "git_blob_sha": "4538ed24487c0630d90491826ee2cc962e70969a"
+    },
+    {
+      "path": "projects/cau-admissions/index.html",
+      "bytes": 243331,
+      "sha256": "e0466b2177421fa50f3ad418a0bce9200fb0c3238a27df6b7464e4891ad35beb",
+      "git_blob_sha": "22919dbf5d3ea1de40d92e20187863f568984197"
+    },
+    {
+      "path": "projects/cau-admissions/source/README.md",
+      "bytes": 2290,
+      "sha256": "3c3f30d8ee2516ab98f9d1c2e05037b355290f315630babe6c2ba4e0ea93acbf",
+      "git_blob_sha": "b6e3f85cfcde3768ca5d694be66a72145b8da467"
+    },
+    {
+      "path": "projects/cau-admissions/source/build.py",
+      "bytes": 670,
+      "sha256": "d8fda82a2355723cb4952783e81abc6120b5553406df0c157a0b13faf0b390a6",
+      "git_blob_sha": "b51bdde553790545f16fc6ceb73b6e7c9444705e"
+    },
+    {
+      "path": "projects/cau-admissions/source/docs/Prompt模板与话术样例.md",
+      "bytes": 61443,
+      "sha256": "599f541bc5c38437387bc0dc18f952d5120eaff4a32bc32745600b9aad1d0f31",
+      "git_blob_sha": "f4fe17b2e85c70bbe2b65e1fc93b0d87542c9d45"
+    },
+    {
+      "path": "projects/cau-admissions/source/docs/content.json",
+      "bytes": 77561,
+      "sha256": "df0b23b1f00259dcf3ee2b09cbbd34daae2ef119e9d0b581f99e61a80f075aa3",
+      "git_blob_sha": "581e47836e36f33fa04ecc7e429064aeccdd92d7"
+    },
+    {
+      "path": "projects/cau-admissions/source/docs/schema-outputs.json",
+      "bytes": 24089,
+      "sha256": "8197691863e121232325c279f969a61183aa6a5d202ff5637898586524a88586",
+      "git_blob_sha": "d119294b45556f238322770fcf1c1f9320cc903a"
+    },
+    {
+      "path": "projects/cau-admissions/source/docs/交互验收记录.md",
+      "bytes": 2607,
+      "sha256": "26a5457ec998091d7ff027b071fc4e9b3eba3ce5a15195bd7457d7dd32716f75",
+      "git_blob_sha": "2a92f893e9c4a887ee2886e70b8eb1f31c45ea56"
+    },
+    {
+      "path": "projects/cau-admissions/source/src/app.css",
+      "bytes": 22596,
+      "sha256": "afa2a5273532cc018be65b605752495a5ae6151897a62cf4d660cb2d93d6bdcd",
+      "git_blob_sha": "ec02f149164c168ad6fd04f11aede332088f8d31"
+    },
+    {
+      "path": "projects/cau-admissions/source/src/engine.js",
+      "bytes": 34634,
+      "sha256": "4e29df35a95b2403ab4b19327db95d1cc744f1f9230920b40389e252940907ef",
+      "git_blob_sha": "8c69b8794b7407b0f1c93cad80593d65e83a7118"
+    },
+    {
+      "path": "projects/cau-admissions/source/src/engine.test.cjs",
+      "bytes": 7477,
+      "sha256": "ff1832827c43bae1d4f73f64a7e420bcba226ba0fb956cb373f5d54dec1e04c0",
+      "git_blob_sha": "d059dff9674c0cd9e1a5049ffdb170151071eaee"
+    },
+    {
+      "path": "projects/cau-admissions/source/src/shell.html",
+      "bytes": 846,
+      "sha256": "581f709e1e2aefc5eca28741087e442c6a10213881c83069161a66f9f2847781",
+      "git_blob_sha": "e68b378f7eeaa223b0b71af881012d700ece7f3a"
+    },
+    {
+      "path": "projects/cau-admissions/source/src/ui.js",
+      "bytes": 48471,
+      "sha256": "4feb8f08bac509bcd810439dde12ec45d9107affec85daddb1825d2343e1076e",
+      "git_blob_sha": "0ccf19a96fefc098f8a0cac1ecbbc8a571e1d955"
+    },
+    {
+      "path": "projects/cau-admissions/使用说明.md",
+      "bytes": 2290,
+      "sha256": "3c3f30d8ee2516ab98f9d1c2e05037b355290f315630babe6c2ba4e0ea93acbf",
+      "git_blob_sha": "b6e3f85cfcde3768ca5d694be66a72145b8da467"
+    },
+    {
+      "path": "projects/cau-application-latest/index.html",
+      "bytes": 1634892,
+      "sha256": "8d510c4b0fd2f537ec3b7ad9beb9b350bee8fe1c492135285cf74206455fffb4",
+      "git_blob_sha": "3614cbf551b3b5235f33d858c05ecbd0b0afdb49"
+    },
+    {
+      "path": "projects/cau-candidate/index.html",
+      "bytes": 1618150,
+      "sha256": "68f283e7272cf1a904dd76683eb8664cb50e31887101aaeae440cbf4441e8534",
+      "git_blob_sha": "1c06d50fa881578df114e2f238adc5467b385574"
+    },
+    {
+      "path": "projects/cau-candidate/source/app.css",
+      "bytes": 44775,
+      "sha256": "22e41c3154cfdbe3c6ff54d02a4ea6b41df65a4c6fd5599add1fa0cdce8d2f76",
+      "git_blob_sha": "4b5279a54899bdac56ff36f284c68b342bce1541"
+    },
+    {
+      "path": "projects/cau-candidate/source/assets/cau-logo.png",
+      "bytes": 535870,
+      "sha256": "b7b6c57dc729f1eb7c53f71c62dcb87444eb853056224d4fb98188cc08c690ac",
+      "git_blob_sha": "ab5c6a0ceacb0cf375a20342aa2f531651e2edaf"
+    },
+    {
+      "path": "projects/cau-candidate/source/assets/official-png/puang-cheer.png",
+      "bytes": 170677,
+      "sha256": "2885e23348fca7bf58d94eec17c3be28020e4550e262ca5a4f2e7c0a0c8ea9af",
+      "git_blob_sha": "bf2a4a1748531a1ddfa822a1eccab2f741d6ec6c"
+    },
+    {
+      "path": "projects/cau-candidate/source/assets/official-png/puang-focus.png",
+      "bytes": 146408,
+      "sha256": "291d93fd3bdbdf2986be84de6ce07a9b9e16cb5bf32cd000fb9012350c7e69d6",
+      "git_blob_sha": "fa307270c8972a18086b19422e0218909e03a0d0"
+    },
+    {
+      "path": "projects/cau-candidate/source/assets/official-png/puang-overnight.png",
+      "bytes": 125640,
+      "sha256": "dad7cdfc32f3e139d00bb8bc7f81baf9ef812f85c34f36ccbb67a423f1c66da4",
+      "git_blob_sha": "345ff85f196f6ce6595c3213dc809906cdccbf5e"
+    },
+    {
+      "path": "projects/cau-candidate/source/assets/official-png/puang-smile.png",
+      "bytes": 130089,
+      "sha256": "4bd68faba8f7c99bd1fc9f2d87a512d0e56b4e3f76f9d2134e6ba1efd06e44e9",
+      "git_blob_sha": "87efca876ea76be8af09ca937e5896e9a9d47c82"
+    },
+    {
+      "path": "projects/cau-candidate/source/build.py",
+      "bytes": 1651,
+      "sha256": "c157c32e5cd7f30f86dfbdda296325222aeebe1ae1fa4b782ac459193cbb159c",
+      "git_blob_sha": "c1681db33a664c8422e9c4246897fe00ce4a85f0"
+    },
+    {
+      "path": "projects/cau-candidate/source/conversation.js",
+      "bytes": 33661,
+      "sha256": "3d878c02decf5ab3180b96e2986526a67407c3dffc134629c28eb82aa792e424",
+      "git_blob_sha": "19c56be6f66ce06bce5add329feda51ea62e7967"
+    },
+    {
+      "path": "projects/cau-candidate/source/conversation.test.cjs",
+      "bytes": 9921,
+      "sha256": "3ebf8ff2698fc3d0409be3d49b49bb3670fa0521822de182f5c4cb34603b0540",
+      "git_blob_sha": "2a47d694ae15a60cdda82bdb5c40e8fd8701a69b"
+    },
+    {
+      "path": "projects/cau-candidate/source/engine.js",
+      "bytes": 14502,
+      "sha256": "3fce35a6d0670123a39317ffebb56e6fb9310677ddc390b27fbeabe3c094e36e",
+      "git_blob_sha": "33935e998628c75e759e1bf3e12c7faeb71df607"
+    },
+    {
+      "path": "projects/cau-candidate/source/engine.test.cjs",
+      "bytes": 7111,
+      "sha256": "6142d28cf21a5843fb3e31786de5940e7330200852594c5bb007ace1cb65a8dc",
+      "git_blob_sha": "4f89fe23883c7e8d4cf7ed10d51d2874d3d92382"
+    },
+    {
+      "path": "projects/cau-candidate/source/interactions.js",
+      "bytes": 3366,
+      "sha256": "274bcb4fb06136d3cc5f3fe9c593c9bfa45d6899b83057bf193d84b9e53653fd",
+      "git_blob_sha": "5d7bc0ee7937d87cfeb0835229f7d2484100c710"
+    },
+    {
+      "path": "projects/cau-candidate/source/interactions.test.cjs",
+      "bytes": 3366,
+      "sha256": "d9acb3051e1421576a4f7123365f65925b1cd0991f6379af52ca2522beb39be0",
+      "git_blob_sha": "24eecfc9fa2e84d348263fe0ebe374da7e3c266b"
+    },
+    {
+      "path": "projects/cau-candidate/source/presentation.js",
+      "bytes": 2493,
+      "sha256": "1147d908f682642e0683dc28c79e63cdfb232ae1c0c1c8db87a3e16d2db76af7",
+      "git_blob_sha": "db6e59f6f3fb3509f65b264c31dc5e5fe367ef02"
+    },
+    {
+      "path": "projects/cau-candidate/source/shell.html",
+      "bytes": 842,
+      "sha256": "9fa75128de5c02cad9c6b8e71d64cfed70999d8fa805c5c58fb164270651880b",
+      "git_blob_sha": "29b767f970ca7f70fa42a549c24a68e140fce91a"
+    },
+    {
+      "path": "projects/cau-candidate/source/ui.js",
+      "bytes": 40194,
+      "sha256": "8b5d01bda63f7d38263fe548d404d30fe396d44f653790d5684f102679a74852",
+      "git_blob_sha": "54384b017ae1c226aeea941f4450271d36964d38"
+    },
+    {
+      "path": "projects/cau-candidate/交互验收记录.md",
+      "bytes": 1104,
+      "sha256": "d003d6981206ea9e3d1a4bda2d739f8e2ff8fc1d9f65f91eca46a8b337cb6f71",
+      "git_blob_sha": "ea463707b50d7b9aca9ab5b16b35f2a475bdb705"
+    },
+    {
+      "path": "projects/cau-candidate/使用说明.md",
+      "bytes": 1789,
+      "sha256": "be521b5d177491a3921cc3dfa8713afde0c5b5470baaf1ae56857e8117109a37",
+      "git_blob_sha": "4292faef5038ada51dd20aa3f143e9ee44d3e076"
+    },
+    {
+      "path": "projects/chengce-stock-screener/.gitignore",
+      "bytes": 84,
+      "sha256": "50ef11f41511aff5431c6f89d6c94701a0eb0cb5600a0a077265b52c9f4811dc",
+      "git_blob_sha": "d5da581754fde28ea3f3de29774bbcd5b52c5f7b"
+    },
+    {
+      "path": "projects/chengce-stock-screener/00_交付说明.md",
+      "bytes": 4108,
+      "sha256": "2cae4425e0e961975a920f66a2faafb6f6e472bf775582fb645936d7ed58bbfa",
+      "git_blob_sha": "f44ef6bdd075006b6cb04611f1785f4eaa835f71"
+    },
+    {
+      "path": "projects/chengce-stock-screener/PUBLIC-MANIFEST.json",
+      "bytes": 8232,
+      "sha256": "307d84091fa42e17c0c1c246c69c56dbbd272fa9ff290fbe66cbbe0d4da78ee4",
+      "git_blob_sha": "6dfbb0813fa33e04775b61c40b718d1f77aaaea6"
+    },
+    {
+      "path": "projects/chengce-stock-screener/README.md",
+      "bytes": 3383,
+      "sha256": "920b58b1d3daf15c00fd31044d9f65b6d93bf761d5950a8daebe3fc93c39ddf3",
+      "git_blob_sha": "5333bfe63dbf24919f9f4a5ce2760ccba08c6934"
+    },
+    {
+      "path": "projects/chengce-stock-screener/产品预览.png",
+      "bytes": 127191,
+      "sha256": "0ef1f36ba2a43230680084ed6d33e156cf5dd362dd8df378e99e0aa6578fac17",
+      "git_blob_sha": "3c64864e91fb1983894b72e4d0615776b2e6c192"
+    },
+    {
+      "path": "projects/chengce-stock-screener/导出示例/澄策_策略.json",
+      "bytes": 711,
+      "sha256": "ece44a8cd3a79a8b07d922f372c242c19233ef52a7feae45f804d20ac674e953",
+      "git_blob_sha": "e40386c0549ffc86a879e118bf223d668e0af90f"
+    },
+    {
+      "path": "projects/chengce-stock-screener/导出示例/澄策_筛选证据.csv",
+      "bytes": 3926,
+      "sha256": "b6820d5602b645d7efda40fc71b3bfceec884400b4710d9e6ada825c2d8adfbc",
+      "git_blob_sha": "3d202288acb46f812470b4cde714d5613e4e5f16"
+    },
+    {
+      "path": "projects/chengce-stock-screener/流程图/business-flow.drawio",
+      "bytes": 11871,
+      "sha256": "0c30faa3b9c0bc9f0779a4a99ff9092f5320a69976cdedaacef9dfbec19502f2",
+      "git_blob_sha": "a09d8ed7fce54b361bf7ffeabbeef1b061af5327"
+    },
+    {
+      "path": "projects/chengce-stock-screener/流程图/business-flow.png",
+      "bytes": 460829,
+      "sha256": "e415aae6d40071ce8365f6fe912c5acc05fbfe3dac2a602dcc43e19edf2731b9",
+      "git_blob_sha": "ec22f2542c4689ce78b23b2366144a179457e9f4"
+    },
+    {
+      "path": "projects/chengce-stock-screener/流程图/product-flow.drawio",
+      "bytes": 10486,
+      "sha256": "e263d39cf4986793df6b70efbcc5a30c445da681c36c73aa06e382d585806727",
+      "git_blob_sha": "52ba9ef218281b9a9b16d5d2982287e8c7874e95"
+    },
+    {
+      "path": "projects/chengce-stock-screener/流程图/product-flow.png",
+      "bytes": 444877,
+      "sha256": "91eef61a856a9c0337f962af6e30b7ad501b0a00a5dff6560e1d6e7f5584d367",
+      "git_blob_sha": "da71e51b9c9a83ccfe525444a1ceff576cd504ef"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/.env.example",
+      "bytes": 128,
+      "sha256": "10298f276bed4c5f8e77288bef149e0f84e01cb178efde683c1164ad25285afb",
+      "git_blob_sha": "cc2012d5038223d911234113691996f7c628348c"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/.gitignore",
+      "bytes": 56,
+      "sha256": "d62b0084e14257cd67eb4f067eb576574bf61dda808cf6c6f1425722b8b6f972",
+      "git_blob_sha": "ed45f735402e4357b15e83c718770d96c5d310ac"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/AI_USAGE.md",
+      "bytes": 3850,
+      "sha256": "5164f6b2cab566492bfbb409d585ced22f7ca42acf4df33dbe4b97f20543e414",
+      "git_blob_sha": "b87ba3e9ceb7c7b1eb40485ad40991f3da305e31"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/README.md",
+      "bytes": 7287,
+      "sha256": "8e253061f4f7e3e26daed4e4692bb0dd0a767b3052f63275d4e911d83f6f08f5",
+      "git_blob_sha": "4ccc0e287fe3e24f477368a1bb72910095306243"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/TESTING.md",
+      "bytes": 2956,
+      "sha256": "689fdfd6e5d15f1764c3639e7258af16c954b0901add2f13096dda9e70a7df80",
+      "git_blob_sha": "7bd86a796d1b060c33223ad98e62ec5dc61f3d95"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/VERIFICATION.md",
+      "bytes": 3069,
+      "sha256": "27b1ec7254eae796d3d100fc456bc7809310914e1598f618a3244fd6ef6af3fc",
+      "git_blob_sha": "a836bb0001d5fea8affe0887200b671e3efa8f79"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/data/data-notes.md",
+      "bytes": 5645,
+      "sha256": "7fbbd54868c642191877ede0ac2dbe03094ceb21ab9af4f91cbf4c6e39852593",
+      "git_blob_sha": "0b294e54ac26b1979dba0b39626b83a37080ab72"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/data/evidence.json",
+      "bytes": 18234,
+      "sha256": "cfe400605cb387b459ff5af3e3237147e1923e4e194d80c4741768fd0705a162",
+      "git_blob_sha": "1ceff97b5341b9e1b9a99546316b0d1d1a0af19f"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/docs/01_PRD.md",
+      "bytes": 16153,
+      "sha256": "9db118841db06821bdb0e474b2cd0937d764a049f725fd9813c1cb9fec70285f",
+      "git_blob_sha": "2bfaaa96548e545722f29e457380d70cfc26649a"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/docs/02_业务流程图.md",
+      "bytes": 4373,
+      "sha256": "bd2d8617489ecf01e573e67dfb53afdab78dbe47576d6df762dca0c4485c4841",
+      "git_blob_sha": "27c132384ebe4917ba9f148d61f34fbe23f4f9d2"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/docs/03_产品流程图.md",
+      "bytes": 4462,
+      "sha256": "31665ad5e156dd7e215d19a030f8bd619c29dc33fa77822b452c38a4854ebef5",
+      "git_blob_sha": "29e794fceec17183c171103bd4196b695a72d81a"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/docs/04_兜底与验收方案.md",
+      "bytes": 12372,
+      "sha256": "3d6e5f3f476d527d81fd438ac2d6b4e922623e2faaf16d90f6bac3f17f863fc6",
+      "git_blob_sha": "519b8a90924c10a1b7c164bbb3abd7e3dfd377dd"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/package.json",
+      "bytes": 284,
+      "sha256": "8871fcdfea7ca65dbd3f5cbe23b21bbbea63dffba6c98946efdbf537de785373",
+      "git_blob_sha": "3743a4cf4681c29cd82b09bb7c0fd9ff2fe80e4b"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/scripts/audit_evidence.py",
+      "bytes": 1758,
+      "sha256": "9e79c0d729db02f0cbff33ed21699fff59810083fe3f7b38a90765ad82043077",
+      "git_blob_sha": "0e2b6cd81c093ef3877e1951a1c3e916cbd736c2"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/scripts/build.mjs",
+      "bytes": 1860,
+      "sha256": "d713ddfb2ced0e441ef488f432f58ec1fd5530306d8b95adfe3df915bab70cad",
+      "git_blob_sha": "a93a498c014fd94d196178ecb21c37eae155d295"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/scripts/dev.mjs",
+      "bytes": 1324,
+      "sha256": "e7e294bdee08ecd2f448f778b91796de702ffb29d2f7b8d47a7c71cd32ebf256",
+      "git_blob_sha": "d59fa6835d3f2805dcdf36c8d4ad57b99a92def5"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/src/app.js",
+      "bytes": 26834,
+      "sha256": "5fa76a096d156852438736aca73b39956da2d2cd275ec029226a9df5cec060c6",
+      "git_blob_sha": "edda05a83b498b5e787ecdd1d5a1ad0617c6e9ff"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/src/engine.js",
+      "bytes": 12936,
+      "sha256": "6d45aa10dc4c1dbbc6800da5ea02fdfe37b99b43dd1e5ea34005b2aee6fddc82",
+      "git_blob_sha": "ef2a14dcb0bbdb956ef266b0197c27df86f6691d"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/src/index.html",
+      "bytes": 6914,
+      "sha256": "6299115e9be822721e92fcc6d6c5c2d78f97da7d1914b1f77174c0a5c33a2d8c",
+      "git_blob_sha": "dd3a67678d9a828e95c8d398c926fcbd5ec465dd"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/src/style.css",
+      "bytes": 18457,
+      "sha256": "1197368206c501e699674dc5e051c9f76f60dd60fe500a4291dc08e2f9bdd612",
+      "git_blob_sha": "4630c9d5eefdd52f3dd8d528b86b6899c31e86be"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/src/worker.js",
+      "bytes": 6301,
+      "sha256": "98e0394d62309cc3aa1cbb751d501212a93e9f7cf88beda7894d64e328c8c61b",
+      "git_blob_sha": "3aa4312219438f88beaaf40c32b147ccca40b64d"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/tests/api.test.mjs",
+      "bytes": 3997,
+      "sha256": "7f831bdf067c7b504062ca5cf3427135ede0251d288cc0dd5439dde892c4d92e",
+      "git_blob_sha": "040d12212ea661241ea71394c0b0b8eb08b1122d"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/tests/engine.test.mjs",
+      "bytes": 6994,
+      "sha256": "f7cbcecbc508a976f95677da992ce27a7e084dbe5d89522ede951179d4f0db2b",
+      "git_blob_sha": "1c09be6549ebc4e955f29664a821c739490ec137"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/流程图/business-flow.drawio",
+      "bytes": 11871,
+      "sha256": "0c30faa3b9c0bc9f0779a4a99ff9092f5320a69976cdedaacef9dfbec19502f2",
+      "git_blob_sha": "a09d8ed7fce54b361bf7ffeabbeef1b061af5327"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/流程图/business-flow.png",
+      "bytes": 460829,
+      "sha256": "e415aae6d40071ce8365f6fe912c5acc05fbfe3dac2a602dcc43e19edf2731b9",
+      "git_blob_sha": "ec22f2542c4689ce78b23b2366144a179457e9f4"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/流程图/product-flow.drawio",
+      "bytes": 10486,
+      "sha256": "e263d39cf4986793df6b70efbcc5a30c445da681c36c73aa06e382d585806727",
+      "git_blob_sha": "52ba9ef218281b9a9b16d5d2982287e8c7874e95"
+    },
+    {
+      "path": "projects/chengce-stock-screener/源代码/流程图/product-flow.png",
+      "bytes": 444877,
+      "sha256": "91eef61a856a9c0337f962af6e30b7ad501b0a00a5dff6560e1d6e7f5584d367",
+      "git_blob_sha": "da71e51b9c9a83ccfe525444a1ceff576cd504ef"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/01_PRD.docx",
+      "bytes": 47959,
+      "sha256": "2f2cedf4d9797c250fb2b593e12c5622a80b8763dc99c0cca9f9f6234f9532b1",
+      "git_blob_sha": "73938a9f4327f3e6265a1c6eab7b8730800d67af"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/01_PRD.md",
+      "bytes": 16153,
+      "sha256": "9db118841db06821bdb0e474b2cd0937d764a049f725fd9813c1cb9fec70285f",
+      "git_blob_sha": "2bfaaa96548e545722f29e457380d70cfc26649a"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/02_业务流程图.docx",
+      "bytes": 389762,
+      "sha256": "ba529d6ea2f3286e5178fb35ad6305fc709878d65223000eb69bc04b95753218",
+      "git_blob_sha": "50c500cf1f426778d814abed035e38f994f442fa"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/02_业务流程图.md",
+      "bytes": 4373,
+      "sha256": "bd2d8617489ecf01e573e67dfb53afdab78dbe47576d6df762dca0c4485c4841",
+      "git_blob_sha": "27c132384ebe4917ba9f148d61f34fbe23f4f9d2"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/03_产品流程图.docx",
+      "bytes": 384358,
+      "sha256": "a5d6b193b7de4b07e24972bcea9618ebde6791df5ca1425400cf00301f142980",
+      "git_blob_sha": "7c53fac1558a8a4543ff5cfe36ff92b54f2dae46"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/03_产品流程图.md",
+      "bytes": 4462,
+      "sha256": "31665ad5e156dd7e215d19a030f8bd619c29dc33fa77822b452c38a4854ebef5",
+      "git_blob_sha": "29e794fceec17183c171103bd4196b695a72d81a"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/04_兜底与验收方案.docx",
+      "bytes": 47318,
+      "sha256": "553c1d7452e0819edea6e10ac0e6e80d08fa2a5b486c42382d9e998b73fd994a",
+      "git_blob_sha": "dec0a14d21a6be2a004811c15e0ef999d45bee4a"
+    },
+    {
+      "path": "projects/chengce-stock-screener/设计文档/04_兜底与验收方案.md",
+      "bytes": 12372,
+      "sha256": "3d6e5f3f476d527d81fd438ac2d6b4e922623e2faaf16d90f6bac3f17f863fc6",
+      "git_blob_sha": "519b8a90924c10a1b7c164bbb3abd7e3dfd377dd"
+    },
+    {
+      "path": "projects/chengce-stock-screener/验证记录/AI_USAGE.md",
+      "bytes": 3850,
+      "sha256": "5164f6b2cab566492bfbb409d585ced22f7ca42acf4df33dbe4b97f20543e414",
+      "git_blob_sha": "b87ba3e9ceb7c7b1eb40485ad40991f3da305e31"
+    },
+    {
+      "path": "projects/chengce-stock-screener/验证记录/TESTING.md",
+      "bytes": 2956,
+      "sha256": "689fdfd6e5d15f1764c3639e7258af16c954b0901add2f13096dda9e70a7df80",
+      "git_blob_sha": "7bd86a796d1b060c33223ad98e62ec5dc61f3d95"
+    },
+    {
+      "path": "projects/chengce-stock-screener/验证记录/VERIFICATION.md",
+      "bytes": 3069,
+      "sha256": "27b1ec7254eae796d3d100fc456bc7809310914e1598f618a3244fd6ef6af3fc",
+      "git_blob_sha": "a836bb0001d5fea8affe0887200b671e3efa8f79"
+    },
+    {
+      "path": "projects/chengce-stock-screener/验证记录/线上验证.md",
+      "bytes": 792,
+      "sha256": "8c7b60cf3800d57517eba6c8632c35873a299bb26a419246c86b8087bbd6ed73",
+      "git_blob_sha": "abaf1c6287a5b244b4e5e53b4ce52e07b3c6ced3"
+    },
+    {
+      "path": "projects/investment-event-lens/MANIFEST.json",
+      "bytes": 552,
+      "sha256": "16336fbf6455c7ff75e4910168d7497596ec062232ebcc9c3462d1a224ff96e3",
+      "git_blob_sha": "179a42abae0c6e73d87b4787d09c2a5741103e8f"
+    },
+    {
+      "path": "projects/investment-event-lens/README.md",
+      "bytes": 2281,
+      "sha256": "9a8742253ada6313540b5a2c2d511d72939bdcbbda73246c1cf4b35b8f66e6e4",
+      "git_blob_sha": "642de09448bdcd19d957e72a16f3aabe8a0d669a"
+    },
+    {
+      "path": "projects/investment-event-lens/index.html",
+      "bytes": 24490,
+      "sha256": "acfdfdcabf747aa978c4adf77fc486307a6eb3c9202ab3df15682dd2988efc08",
+      "git_blob_sha": "792a534347aa10d547a79265b10cfa0773710829"
+    },
+    {
+      "path": "projects/investment-event-lens/同花顺事件透镜_产品设计.md",
+      "bytes": 22466,
+      "sha256": "4db81a68c6b4411d74d3fb611bdabcc8d2f5e9b88db145f66cb59273e1315a9a",
+      "git_blob_sha": "0943a9a7e4aa20b7196063a0ab7ddb37b086c9d8"
+    },
+    {
+      "path": "projects/journey-maps/hr-journey-map.html",
+      "bytes": 49733,
+      "sha256": "8d055a52104d4b0833d072cb62949cb3291435469f5f08a1a981d3296c6f6167",
+      "git_blob_sha": "a5085d2f3271a09b216edf794553a96aca9a8d60"
+    },
+    {
+      "path": "projects/journey-maps/interviewer-journey-map.html",
+      "bytes": 50652,
+      "sha256": "38044075464ff6379997dab2387babdf6e56652bc76de3fd17f7ef32708a62d1",
+      "git_blob_sha": "840defa96ecc0d3852ae6e987a9c38514d884eee"
+    }
+  ],
+  "excludes_itself": true
+}

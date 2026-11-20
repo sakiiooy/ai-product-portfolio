@@ -1,0 +1,688 @@
+[
+  {
+    "is_demo": true,
+    "intent": "progress",
+    "case_id": "p1",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】林予安，DEMO-CAU-2027-0186：当前模拟阶段为“面试已安排”。面试为2026-10-29 14:00–14:30 KST；最近业务进展为2026-10-22 09:20 KST。来源MOCK-ATS-P1；本次查询时间为2026-10-25 10:00 KST。以上均为本地mock，不代表CAU真实安排。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-ATS-P1",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "刷新模拟进度",
+        "action": "query_refresh"
+      },
+      {
+        "label": "查看模拟来源",
+        "action": "query_source"
+      }
+    ],
+    "state": {
+      "stage": "面试已安排",
+      "last_business_update_at": "2026-10-22T09:20:00+09:00",
+      "queried_at": "2026-10-25T10:00:00+09:00",
+      "interview_start": "2026-10-29T14:00:00+09:00",
+      "interview_end": "2026-10-29T14:30:00+09:00",
+      "interview_confirmation_status": "confirmed",
+      "next_update_at": null,
+      "source_status": "ok"
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "progress",
+    "case_id": "p2",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本情境的安排确认来自本地MOCK-ATS-P2记录，不是CAU官网或工作人员回复。它记录的面试时间为2026-10-29 14:00–14:30 KST；业务更新时间为2026-10-22 09:20 KST，读取时间为2026-10-25 10:00 KST。读取时间不能代替业务更新时间。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-ATS-P2",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "展开模拟来源",
+        "action": "query_source"
+      },
+      {
+        "label": "重新读取",
+        "action": "query_refresh"
+      }
+    ],
+    "state": {
+      "stage": "面试已安排",
+      "last_business_update_at": "2026-10-22T09:20:00+09:00",
+      "queried_at": "2026-10-25T10:00:00+09:00",
+      "interview_start": "2026-10-29T14:00:00+09:00",
+      "interview_end": "2026-10-29T14:30:00+09:00",
+      "interview_confirmation_status": "confirmed",
+      "next_update_at": null,
+      "source_status": "ok"
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "progress",
+    "case_id": "p3",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本情境仅有2026-10-29 14:00–14:30 KST的模拟候选时段，MOCK-ATS-P3没有提供安排确认凭据。因此应显示“面试时间待确认”，不能沿用默认“已安排”。可查看缺失项，或创建本地人工核查请求。",
+    "data_status": "partial",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试时间待确认",
+        "source_id": "MOCK-ATS-P3",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [
+      "模拟安排确认凭据缺失"
+    ],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "查看待确认项",
+        "action": "query_source"
+      },
+      {
+        "label": "转本地人工核查",
+        "action": "transfer"
+      }
+    ],
+    "state": {
+      "stage": "面试时间待确认",
+      "last_business_update_at": "2026-10-22T09:20:00+09:00",
+      "queried_at": "2026-10-25T10:00:00+09:00",
+      "interview_start": null,
+      "interview_end": null,
+      "interview_confirmation_status": "unknown",
+      "next_update_at": null,
+      "source_status": "ok"
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "progress",
+    "case_id": "p4",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】MOCK-ATS-P4未提供业务更新时间，因此无法计算停留时长，也无法确定下一次更新。2026-10-25 10:00 KST只是本次模拟查询时间，不能据此声称进度刚更新。当前信息不足，可刷新或查看来源缺项。",
+    "data_status": "partial",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-ATS-P4",
+        "recorded_at": null,
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供",
+      "业务更新时间为空，不能计算停留天数"
+    ],
+    "buttons": [
+      {
+        "label": "查看来源缺项",
+        "action": "query_source"
+      },
+      {
+        "label": "刷新模拟记录",
+        "action": "query_refresh"
+      }
+    ],
+    "state": {
+      "stage": "面试已安排",
+      "last_business_update_at": null,
+      "queried_at": "2026-10-25T10:00:00+09:00",
+      "interview_start": "2026-10-29T14:00:00+09:00",
+      "interview_end": "2026-10-29T14:30:00+09:00",
+      "interview_confirmation_status": "confirmed",
+      "next_update_at": null,
+      "source_status": "ok"
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "progress",
+    "case_id": "p5",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本地mock查询返回MOCK_SOURCE_TIMEOUT，未取得新记录；我无法确认最新状态，也不能保证明天更新。缓存内容不代表最新结果。可以重试，或创建本地待人工核查工单；尚未联系CAU。",
+    "data_status": "unavailable",
+    "facts": [],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供",
+      "当前读取失败，页面仅保留最后已知演示快照"
+    ],
+    "buttons": [
+      {
+        "label": "重试模拟查询",
+        "action": "retry"
+      },
+      {
+        "label": "创建本地工单",
+        "action": "open_ticket"
+      }
+    ],
+    "state": {
+      "stage": "面试已安排",
+      "last_business_update_at": "2026-10-22T09:20:00+09:00",
+      "queried_at": "2026-10-25T10:00:00+09:00",
+      "interview_start": null,
+      "interview_end": null,
+      "interview_confirmation_status": "unknown",
+      "next_update_at": null,
+      "source_status": "error"
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "reschedule",
+    "case_id": "r1",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】当前模拟安排为2026-10-29 14:00–14:30 KST。可选择本地候选时段2026-10-30 10:00–10:30或2026-11-02 15:00–15:30 KST。现在只创建改期草稿，不取消原安排；提交后仍须模拟招生方确认。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-RESCHEDULE-R1",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "选择模拟时段",
+        "action": "reschedule_choose"
+      },
+      {
+        "label": "取消本次草稿",
+        "action": "reschedule_cancel"
+      }
+    ],
+    "state": {
+      "request_status": "draft",
+      "request_id": null,
+      "draft_version": "v1",
+      "original_start": "2026-10-29T14:00:00+09:00",
+      "original_end": "2026-10-29T14:30:00+09:00",
+      "requested_start": null,
+      "requested_end": null,
+      "user_confirmed": false,
+      "admissions_approval": "missing",
+      "calendar_synced": false,
+      "verified": false,
+      "calendar_event_id": null,
+      "original_schedule_verified_active": true
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "reschedule",
+    "case_id": "r2",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】目前缺少明确的新日期和起止时间，“下周上午”不足以形成可确认的申请。请从本地候选时段选择，并确认按Asia/Seoul（KST）理解。信息补齐及你确认当前草稿前，不会提交或改变原安排。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-RESCHEDULE-R2",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "补充目标时段",
+        "action": "reschedule_choose"
+      },
+      {
+        "label": "取消草稿",
+        "action": "reschedule_cancel"
+      }
+    ],
+    "state": {
+      "request_status": "draft",
+      "request_id": null,
+      "draft_version": "v1",
+      "original_start": "2026-10-29T14:00:00+09:00",
+      "original_end": "2026-10-29T14:30:00+09:00",
+      "requested_start": null,
+      "requested_end": null,
+      "user_confirmed": false,
+      "admissions_approval": "missing",
+      "calendar_synced": false,
+      "verified": false,
+      "calendar_event_id": null,
+      "original_schedule_verified_active": true
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "reschedule",
+    "case_id": "r3",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】改期草稿v3：原时间2026-10-29 14:00–14:30 KST；申请时间2026-10-30 10:00–10:30 KST。尚未提交，原安排未因本草稿改变。请确认是否提交这一版模拟申请；即使提交成功，也仍待模拟招生方确认。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-RESCHEDULE-R3",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "确认并模拟提交v3",
+        "action": "reschedule_submit"
+      },
+      {
+        "label": "返回修改时段",
+        "action": "reschedule_choose"
+      }
+    ],
+    "state": {
+      "request_status": "awaiting_user_confirmation",
+      "request_id": null,
+      "draft_version": "v3",
+      "original_start": "2026-10-29T14:00:00+09:00",
+      "original_end": "2026-10-29T14:30:00+09:00",
+      "requested_start": "2026-10-30T10:00:00+09:00",
+      "requested_end": "2026-10-30T10:30:00+09:00",
+      "user_confirmed": false,
+      "admissions_approval": "missing",
+      "calendar_synced": false,
+      "verified": false,
+      "calendar_event_id": null,
+      "original_schedule_verified_active": true
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "reschedule",
+    "case_id": "r4",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本情境的MOCK-RESCHEDULE-R4返回：当前草稿已确认、模拟招生方已批准、calendar_synced=true且verified=true。因此可显示“模拟改期完成”：2026-10-30 10:00–10:30 KST。请求ID为MOCK-RQ-R4，事件ID为MOCK-EVENT-R4。这不是CAU真实确认，也不能据此保证对录取结果的影响。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-RESCHEDULE-R4",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "查看模拟确认凭据",
+        "action": "query_source"
+      },
+      {
+        "label": "查看模拟进度",
+        "action": "query_refresh"
+      }
+    ],
+    "state": {
+      "request_status": "completed_demo",
+      "request_id": "DEMO-RS-0001",
+      "draft_version": "v2",
+      "original_start": "2026-10-29T14:00:00+09:00",
+      "original_end": "2026-10-29T14:30:00+09:00",
+      "requested_start": "2026-10-30T10:00:00+09:00",
+      "requested_end": "2026-10-30T10:30:00+09:00",
+      "user_confirmed": true,
+      "admissions_approval": "approved",
+      "calendar_synced": true,
+      "verified": true,
+      "calendar_event_id": "DEMO-EVENT-0186-v2",
+      "original_schedule_verified_active": false
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "reschedule",
+    "case_id": "r5",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】MOCK-RESCHEDULE-R5返回目标时段冲突、写入未成功，未取得改期完成凭据。同一模拟工具核验原安排仍为2026-10-29 14:00–14:30 KST。不会沿用r4的成功结果或重复提交。可重新选择时间，或创建本地人工核查工单。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试已安排",
+        "source_id": "MOCK-RESCHEDULE-R5",
+        "recorded_at": "2026-10-22T09:20:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "重选模拟时段",
+        "action": "reschedule_choose"
+      },
+      {
+        "label": "创建本地工单",
+        "action": "open_ticket"
+      }
+    ],
+    "state": {
+      "request_status": "failed",
+      "request_id": null,
+      "draft_version": "v2",
+      "original_start": "2026-10-29T14:00:00+09:00",
+      "original_end": "2026-10-29T14:30:00+09:00",
+      "requested_start": "2026-10-30T10:00:00+09:00",
+      "requested_end": "2026-10-30T10:30:00+09:00",
+      "user_confirmed": true,
+      "admissions_approval": "missing",
+      "calendar_synced": false,
+      "verified": false,
+      "calendar_event_id": null,
+      "original_schedule_verified_active": true
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "stalled",
+    "case_id": "s1",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本情境切换为“面试评估中”，最近有效进展为2026-10-13 17:00 KST。到演示时钟2026-10-25 10:00 KST，按KST日期差为12个自然日，不代表满12个24小时。7日仅为本地提醒参数，不是CAU响应期限，不能据此判定超时或拒录。来源MOCK-ATS-S1。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试评估中",
+        "source_id": "MOCK-ATS-S1",
+        "recorded_at": "2026-10-13T17:00:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "查看模拟来源",
+        "action": "query_source"
+      },
+      {
+        "label": "准备本地提醒",
+        "action": "subscribe"
+      }
+    ],
+    "state": {
+      "stage": "面试评估中",
+      "last_effective_progress_at": "2026-10-13T17:00:00+09:00",
+      "elapsed_calendar_days": 12,
+      "calendar_day_method": "Asia/Seoul本地日期差，不代表完整24小时数",
+      "reminder_threshold_days": 7,
+      "threshold_type": "demo_parameter_not_official_sla",
+      "subscription_status": "not_requested",
+      "followup_status": "none",
+      "draft_version": null,
+      "draft_user_confirmed": false,
+      "send_receipt": null,
+      "delivery_receipt": null,
+      "acceptance_receipt": null
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "stalled",
+    "case_id": "s2",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】当前mock记录只有“面试评估中”，没有拒录记录或停留原因。无更新不等于拒录；我无法推断你的录取概率、招生方判断或具体原因，也无法确定下一次更新时间。可以查看已知信息，或先写一份询问草稿。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试评估中",
+        "source_id": "MOCK-ATS-S2",
+        "recorded_at": "2026-10-13T17:00:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "查看已知与未知项",
+        "action": "query_source"
+      },
+      {
+        "label": "生成催询草稿",
+        "action": "compose_followup"
+      }
+    ],
+    "state": {
+      "stage": "面试评估中",
+      "last_effective_progress_at": "2026-10-13T17:00:00+09:00",
+      "elapsed_calendar_days": 12,
+      "calendar_day_method": "Asia/Seoul本地日期差，不代表完整24小时数",
+      "reminder_threshold_days": 7,
+      "threshold_type": "demo_parameter_not_official_sla",
+      "subscription_status": "not_requested",
+      "followup_status": "none",
+      "draft_version": null,
+      "draft_user_confirmed": false,
+      "send_receipt": null,
+      "delivery_receipt": null,
+      "acceptance_receipt": null
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "stalled",
+    "case_id": "s3",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】可创建本地模拟订阅：仅在阶段或已确认面试时间变化时提醒，无变化不反复催询。目前尚未收到订阅创建回执，不能说已启用；确认后只在本演示内生效，不接入CAU真实系统，也不保证学校更新频率。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试评估中",
+        "source_id": "MOCK-ATS-S3",
+        "recorded_at": "2026-10-13T17:00:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "确认本地模拟订阅",
+        "action": "subscribe"
+      },
+      {
+        "label": "返回演示首页",
+        "action": "reset"
+      }
+    ],
+    "state": {
+      "stage": "面试评估中",
+      "last_effective_progress_at": "2026-10-13T17:00:00+09:00",
+      "elapsed_calendar_days": 12,
+      "calendar_day_method": "Asia/Seoul本地日期差，不代表完整24小时数",
+      "reminder_threshold_days": 7,
+      "threshold_type": "demo_parameter_not_official_sla",
+      "subscription_status": "not_requested",
+      "followup_status": "none",
+      "draft_version": null,
+      "draft_user_confirmed": false,
+      "send_receipt": null,
+      "delivery_receipt": null,
+      "acceptance_receipt": null
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "stalled",
+    "case_id": "s4",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】草稿v1，尚未发送：\n“您好，我是虚拟申请人林予安，演示申请编号DEMO-CAU-2027-0186，硕士申请·AI方向（演示专业），2027春（演示批次）。想了解当前面试评估进度，是否需要补充材料，以及可告知的下一步。谢谢。”\n可修改后再确认。点击确认仅调用本地模拟发送；有发送回执才记为模拟已发送，送达或受理另需凭据，不会发往CAU。",
+    "data_status": "mock_confirmed",
+    "facts": [
+      {
+        "text": "本地演示阶段：面试评估中",
+        "source_id": "MOCK-ATS-S4",
+        "recorded_at": "2026-10-13T17:00:00+09:00",
+        "is_mock": true
+      }
+    ],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供"
+    ],
+    "buttons": [
+      {
+        "label": "确认v1并模拟提交",
+        "action": "confirm_followup"
+      },
+      {
+        "label": "修改草稿",
+        "action": "compose_followup"
+      }
+    ],
+    "state": {
+      "stage": "面试评估中",
+      "last_effective_progress_at": "2026-10-13T17:00:00+09:00",
+      "elapsed_calendar_days": 12,
+      "calendar_day_method": "Asia/Seoul本地日期差，不代表完整24小时数",
+      "reminder_threshold_days": 7,
+      "threshold_type": "demo_parameter_not_official_sla",
+      "subscription_status": "not_requested",
+      "followup_status": "awaiting_confirmation",
+      "draft_version": "v1",
+      "draft_user_confirmed": false,
+      "send_receipt": null,
+      "delivery_receipt": null,
+      "acceptance_receipt": null
+    }
+  },
+  {
+    "is_demo": true,
+    "intent": "stalled",
+    "case_id": "s5",
+    "application_id": "DEMO-CAU-2027-0186",
+    "as_of": "2026-10-25T10:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "message": "【演示｜非CAU官方状态】本情境进度查询失败，模拟催询渠道也不可用，未取得发送回执；草稿保留但没有发送，最新状态无法确认。不会宣称已联系、已送达或已受理，也不能据此推断拒录。可以稍后重试，或创建本地待人工核查工单。",
+    "data_status": "unavailable",
+    "facts": [],
+    "pending_confirmation": [],
+    "unknowns": [
+      "CAU真实申请状态未接入",
+      "录取结论和下一次官方更新时间未提供",
+      "当前读取失败，页面仅保留最后已知演示快照"
+    ],
+    "buttons": [
+      {
+        "label": "稍后重试模拟任务",
+        "action": "retry"
+      },
+      {
+        "label": "创建本地工单",
+        "action": "open_ticket"
+      }
+    ],
+    "state": {
+      "stage": "面试评估中",
+      "last_effective_progress_at": "2026-10-13T17:00:00+09:00",
+      "elapsed_calendar_days": 12,
+      "calendar_day_method": "Asia/Seoul本地日期差，不代表完整24小时数",
+      "reminder_threshold_days": 7,
+      "threshold_type": "demo_parameter_not_official_sla",
+      "subscription_status": "not_requested",
+      "followup_status": "awaiting_confirmation",
+      "draft_version": "v1",
+      "draft_user_confirmed": false,
+      "send_receipt": null,
+      "delivery_receipt": null,
+      "acceptance_receipt": null
+    }
+  }
+]

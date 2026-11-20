@@ -1,0 +1,26 @@
+{
+  "id": "7939dc2b-7ac6-4f16-85e3-72a6489168a5",
+  "name": "经营改善，营收和归母净利同比至少5%",
+  "intent": "经营改善，营收和归母净利同比至少5%",
+  "rules": [
+    {
+      "id": "revenue_growth_yoy-0",
+      "field": "revenue_growth_yoy",
+      "op": ">=",
+      "value": 4,
+      "enabled": true,
+      "origin": "用户修改"
+    },
+    {
+      "id": "profit_growth_yoy-1",
+      "field": "profit_growth_yoy",
+      "op": ">=",
+      "value": 5,
+      "enabled": true,
+      "origin": "原文明确"
+    }
+  ],
+  "snapshot_id": "annual-2024-v1",
+  "snapshot_hash": "535580bf7304cba0575741ea843585ed62b1735a78de66182aa100eac9cfc909",
+  "saved_at": "2026-11-19T14:53:53.088Z"
+}

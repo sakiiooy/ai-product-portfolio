@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>事件透镜｜合成事件演示</title>
+</head>
+<body>
+<div id="event-lens-demo" lang="zh-CN">
+  <style>
+    #event-lens-demo { --el-bg: light-dark(#ffffff,#181b22); --el-soft: light-dark(#f4f6f9,#232731); --el-ink: light-dark(#202632,#e8ebf2); --el-muted: light-dark(#5b6575,#adb6c6); --el-line: light-dark(#dce1e9,#3e4552); --el-accent: light-dark(#315aac,#a4beff); --el-active: light-dark(#e9effc,#283854); --el-warn: light-dark(#8c4d08,#f4c78d); --el-warnbg: light-dark(#fff4e5,#382b1d); color:var(--el-ink); font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; font-size:14px; line-height:1.6; color-scheme:light dark; }
+    #event-lens-demo * { box-sizing:border-box; }
+    #event-lens-demo .el-shell { background:var(--el-bg); border:1px solid var(--el-line); border-radius:14px; padding:20px; }
+    #event-lens-demo .el-brand { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding-right:90px; margin-bottom:16px; }
+    #event-lens-demo .el-brand strong { font-size:15px; font-weight:500; }
+    #event-lens-demo .el-tag { display:inline-flex; background:var(--el-soft); border-radius:5px; padding:2px 7px; font-size:12px; color:var(--el-muted); }
+    #event-lens-demo h2,#event-lens-demo h3,#event-lens-demo p { margin:0; }
+    #event-lens-demo h2 { font-size:20px; line-height:1.45; font-weight:500; }
+    #event-lens-demo h3 { font-size:14px; font-weight:500; }
+    #event-lens-demo .el-sub { color:var(--el-muted); font-size:12px; margin-top:5px; }
+    #event-lens-demo .el-controls { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:12px; margin:18px 0 14px; }
+    #event-lens-demo label { display:flex; flex-direction:column; gap:5px; font-size:12px; color:var(--el-muted); }
+    #event-lens-demo select { width:100%; min-height:40px; border:1px solid var(--el-line); border-radius:7px; padding:8px 10px; background:var(--el-bg); color:var(--el-ink); font:inherit; font-size:13px; }
+    #event-lens-demo button { font:inherit; color:inherit; }
+    #event-lens-demo button:focus-visible,#event-lens-demo select:focus-visible { outline:2px solid var(--el-accent); outline-offset:3px; }
+    #event-lens-demo .el-snapshot { background:var(--el-soft); border-radius:10px; padding:15px 16px; }
+    #event-lens-demo .el-statusline { display:flex; flex-wrap:wrap; gap:8px 18px; color:var(--el-muted); font-size:12px; margin-bottom:7px; }
+    #event-lens-demo .el-current { font-size:17px; font-weight:500; margin-bottom:7px; }
+    #event-lens-demo .el-claims { display:grid; gap:6px; }
+    #event-lens-demo .el-claim { display:flex; align-items:baseline; flex-wrap:wrap; gap:4px; }
+    #event-lens-demo .el-cite { border:0; background:transparent; color:var(--el-accent); padding:2px 4px; border-radius:4px; font-size:12px; }
+    #event-lens-demo .el-gap { margin-top:10px; color:var(--el-muted); font-size:12px; }
+    #event-lens-demo .el-delta { margin-top:12px; padding-top:11px; border-top:1px solid var(--el-line); font-size:13px; }
+    #event-lens-demo .el-health { margin-top:10px; padding:10px 12px; border-radius:7px; color:var(--el-warn); background:var(--el-warnbg); font-size:12px; }
+    #event-lens-demo .el-tabs { display:flex; flex-wrap:wrap; gap:4px; margin:18px 0 14px; border-bottom:1px solid var(--el-line); padding-bottom:8px; }
+    #event-lens-demo .el-tab { border:0; background:transparent; border-radius:6px; padding:7px 11px; font-size:13px; color:var(--el-muted); }
+    #event-lens-demo .el-tab[aria-selected="true"] { background:var(--el-active); color:var(--el-accent); }
+    #event-lens-demo .el-grid { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr); gap:20px; }
+    #event-lens-demo .el-list { display:grid; align-content:start; gap:4px; }
+    #event-lens-demo .el-material { width:100%; text-align:left; border:0; border-left:2px solid var(--el-line); padding:9px 10px; background:transparent; border-radius:0 6px 6px 0; }
+    #event-lens-demo .el-material[aria-pressed="true"] { background:var(--el-active); border-left-color:var(--el-accent); }
+    #event-lens-demo .el-material small { display:block; color:var(--el-muted); font-size:12px; }
+    #event-lens-demo .el-material span { display:block; font-size:13px; margin-top:2px; }
+    #event-lens-demo .el-detail { min-width:0; }
+    #event-lens-demo .el-detailhead { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin-bottom:8px; }
+    #event-lens-demo .el-detailtitle { margin:8px 0 3px; font-weight:500; }
+    #event-lens-demo .el-quote { border-left:2px solid var(--el-line); margin:10px 0; padding:0 0 0 11px; font-size:13px; }
+    #event-lens-demo .el-reason { margin:10px 0; font-size:12px; color:var(--el-muted); }
+    #event-lens-demo .el-times { display:grid; grid-template-columns:1fr 1fr; gap:8px 14px; padding-top:10px; border-top:1px solid var(--el-line); font-size:12px; }
+    #event-lens-demo .el-times dt { color:var(--el-muted); }
+    #event-lens-demo .el-times dd { margin:0; overflow-wrap:anywhere; }
+    #event-lens-demo .el-origin { margin-top:12px; padding-top:10px; border-top:1px solid var(--el-line); font-size:12px; color:var(--el-muted); }
+    #event-lens-demo .el-pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:12px 0; }
+    #event-lens-demo .el-pair p { font-size:13px; margin-top:6px; }
+    #event-lens-demo .el-rule { padding:12px; background:var(--el-soft); border-radius:8px; font-size:13px; }
+    #event-lens-demo .el-row { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.5fr); gap:14px; padding:12px 0; border-bottom:1px solid var(--el-line); font-size:13px; }
+    #event-lens-demo .el-role { color:var(--el-muted); font-size:12px; margin-top:3px; }
+    #event-lens-demo .el-foot { margin-top:14px; color:var(--el-muted); font-size:12px; }
+    #event-lens-demo [hidden] { display:none !important; }
+    @media (max-width:580px) {
+      #event-lens-demo .el-shell { padding:14px; }
+      #event-lens-demo .el-grid,#event-lens-demo .el-controls,#event-lens-demo .el-pair { grid-template-columns:minmax(0,1fr); }
+      #event-lens-demo .el-times { grid-template-columns:minmax(0,1fr); }
+      #event-lens-demo .el-row { grid-template-columns:minmax(0,1fr); gap:4px; }
+      #event-lens-demo h2 { font-size:18px; }
+    }
+    @media (pointer:coarse) { #event-lens-demo button,#event-lens-demo select { min-height:44px; } #event-lens-demo select { font-size:16px; } }
+  </style>
+  <section class="el-shell" aria-label="同花顺事件透镜核心交互演示">
+    <div class="el-brand"><strong>同花顺 · 事件透镜</strong><span class="el-tag">产品概念 · 合成演示</span></div>
+    <h2>示例甲—示例乙供货合作进展</h2>
+    <p class="el-sub">全部公司、金额与材料均为虚构；日期为2026年，北京时间 UTC+8。非实时数据。</p>
+    <div class="el-controls">
+      <label>回到当时 · 系统已收录的证据
+        <select id="el-stage" aria-label="选择历史时点">
+          <option value="0">11/02 09:30 · 传闻出现</option>
+          <option value="1">11/02 13:05 · 公司回应与研报</option>
+          <option value="2">11/03 18:05 · 框架协议披露</option>
+          <option value="3" selected>11/04 09:05 · 披露金额更正</option>
+          <option value="4">11/05 18:05 · 框架终止</option>
+        </select>
+      </label>
+      <label>模拟来源检查
+        <select id="el-health" aria-label="模拟来源可用性">
+          <option value="ok">最近检查成功</option>
+          <option value="failed">后续检查接口超时</option>
+          <option value="stale">超过复核周期未成功更新</option>
+        </select>
+      </label>
+    </div>
+    <div id="el-summary" aria-live="polite"></div>
+    <div class="el-tabs" role="tablist" aria-label="事件核查视图">
+      <button id="el-tab-evidence" class="el-tab" role="tab" aria-selected="true" aria-controls="el-panel-evidence" type="button">证据时间线</button>
+      <button id="el-tab-conflict" class="el-tab" role="tab" aria-selected="false" aria-controls="el-panel-conflict" type="button">冲突与口径</button>
+      <button id="el-tab-relation" class="el-tab" role="tab" aria-selected="false" aria-controls="el-panel-relation" type="button">与关注标的的关系</button>
+    </div>
+    <section id="el-panel-evidence" role="tabpanel" aria-labelledby="el-tab-evidence">
+      <div class="el-grid"><div id="el-list" class="el-list" aria-label="已收录材料"></div><div id="el-detail" class="el-detail" aria-live="polite"></div></div>
+      <p class="el-origin">最早已收录披露：11/02 09:10，匿名社区材料 S1。原帖身份未核实；本演示仅覆盖下列合成材料，不声称全网首发。</p>
+    </section>
+    <section id="el-panel-conflict" role="tabpanel" aria-labelledby="el-tab-conflict" hidden><div id="el-conflicts"></div></section>
+    <section id="el-panel-relation" role="tabpanel" aria-labelledby="el-tab-relation" hidden><div id="el-relations"></div></section>
+    <p class="el-foot">“内容性质”“核验状态”“资料可用性”分开呈现。材料中的未来预期不会自动成为已发生事实。</p>
+  </section>
+  <script>
+    (() => {
+      const root = document.getElementById('event-lens-demo');
+      const documents = [
+        {id:'S1',stage:0,time:'11/02 09:10',title:'匿名消息与12篇同源转载',kind:'传闻',source:'合成匿名社区材料',position:'S1 · 第1段',quote:'示例甲公司已与示例乙公司签下20亿元正式供货订单。',reason:'出处身份未核实。12篇转载均回指本材料，仅构成1条来源链；不提供独立签约证据。',happened:'未披露',published:'2026-11-02 09:10',retrieved:'2026-11-02 09:12',updated:'未提供',effect:'待核实；传播数量不改变核验状态。'},
+        {id:'S2',stage:1,time:'11/02 11:10',title:'公司回应：尚未签正式合同',kind:'可核查陈述',source:'合成公司回应',position:'S2 · 第2段',quote:'截至本回应披露时，本公司尚未与示例乙公司签署该事项的正式采购合同。',reason:'当事方就签约状态作出直接表态。否认范围仅限回应时点的正式采购合同，不能扩展为从未洽谈。',happened:'声明适用截至11/02 11:10',published:'2026-11-02 11:10',retrieved:'2026-11-02 11:12',updated:'未提供',effect:'“已签正式合同”主张遭当事方否认；20亿元金额仍未获得证实。'},
+        {id:'S3',stage:1,time:'11/02 13:00',title:'研报：若合作落地或贡献收入',kind:'条件推测',source:'合成研报观点',position:'S3 · 第3段',quote:'若上述合作最终落实并形成采购，可能贡献新增收入，具体影响取决于订单、交付与收入确认条件。',reason:'情景前提引用S1，非独立签约证据。条件性分析不进入已发生订单或收入。',happened:'不适用：分析情景',published:'2026-11-02 13:00',retrieved:'2026-11-02 13:02',updated:'未提供',effect:'新增分析观点，未增加已签约事实。'},
+        {id:'S4',stage:2,time:'11/03 18:00',title:'签署框架：上限10亿元',kind:'可核查陈述',source:'合成框架协议公告',position:'S4 · 第2段、第4段',quote:'双方于11月3日16:30签署供货合作框架协议，拟合作金额上限为10亿元。框架不构成最低采购承诺，具体采购须另行签署合同。',reason:'直接原始材料支持框架签署及当时披露条件；上限并非实际订单额或收入。',happened:'2026-11-03 16:30',published:'2026-11-03 18:00',retrieved:'2026-11-03 18:02',updated:'未提供',effect:'事件进入框架协议阶段，实际采购仍需补证。'},
+        {id:'S5',stage:3,time:'11/04 09:00',title:'更正：金额上限应为1亿元',kind:'更正陈述',source:'合成更正公告',position:'S5 · 第1段',quote:'原框架公告第2段拟合作金额上限“10亿元”为披露笔误，应更正为“1亿元”。其余条款不变。',reason:'明确指向S4的同一金额字段，应取代该字段旧值。此次披露修正不证明实际订单发生变化。',happened:'业务变动时间未披露',published:'2026-11-04 09:00',retrieved:'2026-11-04 09:02',updated:'未提供：独立更正文件',effect:'当前有效上限改为1亿元，S4的10亿元字段不再支撑现时结论。'},
+        {id:'S6',stage:4,time:'11/05 18:00',title:'公告：该框架协议终止',kind:'可核查陈述',source:'合成框架终止公告',position:'S6 · 第2段',quote:'经双方协商，前述供货合作框架协议于11月5日15:00终止。本公告未披露实际采购、结算或其他独立合作安排。',reason:'直接原始材料明确终止对象和生效时点；不能推导全部业务停止或已生效订单取消。',happened:'2026-11-05 15:00',published:'2026-11-05 18:00',retrieved:'2026-11-05 18:02',updated:'未提供',effect:'该框架终止；依赖其继续有效的合作假设需重新评估。'}
+      ];
+      const snapshots = [
+        {asof:'11/02 09:30',progress:'传闻线索',state:'待核实',title:'出现20亿元订单传闻，尚无独立支持',claims:[['“已签20亿元订单”为匿名说法。',['S1']],['12篇同源转载仅延长传播链。',['S1']]],gap:'合同是否存在、实际金额、采购条件与原帖身份均未核实。',delta:'首次收录该说法；尚无可确认的业务进展。',selected:'S1'},
+        {asof:'11/02 13:05',progress:'实际合作进程待确认',state:'当事方否认签约主张',title:'公司否认截至回应时已签正式合同',claims:[['截至11/02回应时，公司称未签该事项的正式采购合同。',['S2']],['研报仅讨论合作落地后的可能情景。',['S3']]],gap:'是否洽谈、未来是否合作与实际订单金额仍未知。',delta:'新增当事方否认；新增研报没有提供独立签约证据。',selected:'S2'},
+        {asof:'11/03 18:05',progress:'框架协议已签署',state:'框架获直接材料支持',title:'框架已披露，上限并非实际订单',claims:[['双方签署框架，披露拟合作金额上限10亿元。',['S4']],['无最低采购承诺，具体采购须另行签约。',['S4']]],gap:'实际采购合同、交付和收入尚未披露。',delta:'新增框架事实；与昨日“未签正式采购合同”并非必然冲突。',selected:'S4'},
+        {asof:'11/04 09:05',progress:'框架协议已签署',state:'金额字段已更正',title:'披露金额更正：10亿元 → 1亿元',claims:[['当前有效的拟合作上限为1亿元。',['S5']],['无最低采购承诺；上限不等于订单或收入。',['S4','S5']]],gap:'实际采购、交付、收入仍未披露；最初20亿元说法未获证实。',delta:'仅披露字段更正，不能表述为“订单缩水90%”。',selected:'S5'},
+        {asof:'11/05 18:05',progress:'该框架已终止',state:'终止获直接材料支持',title:'该框架协议已终止',claims:[['框架于11/05 15:00终止。',['S6']],['更正后的1亿元上限仅作为历史条件保留。',['S5','S6']]],gap:'未提供实际采购或结算资料，不能推定取消了已生效订单。',delta:'业务进程由框架有效变为终止；依赖该框架的后续假设需复核。',selected:'S6'}
+      ];
+      let state = {stage:3,health:'ok',tab:'evidence',selected:'S5'};
+      const byId = (id) => root.querySelector('#'+id);
+      const escapeText = (text) => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      const cites = ids => ids.map(id => '<button class="el-cite" type="button" data-evidence="'+id+'" aria-label="核查合成材料'+id+'">['+id+']</button>').join('');
+      function compatible(saved) {
+        if (!saved || typeof saved !== 'object') return;
+        const candidate = saved.privateContent || {};
+        if (Number.isInteger(candidate.stage) && candidate.stage>=0 && candidate.stage<5) state.stage=candidate.stage;
+        if (['ok','failed','stale'].includes(candidate.health)) state.health=candidate.health;
+        if (['evidence','conflict','relation'].includes(candidate.tab)) state.tab=candidate.tab;
+        state.selected = documents.some(d => d.id===candidate.selected && d.stage<=state.stage) ? candidate.selected : snapshots[state.stage].selected;
+      }
+      function save() {
+        if (window.openai && window.openai.setWidgetState) {
+          const result = window.openai.setWidgetState({modelContent:{event:'示例甲—示例乙供货合作（纯合成）',asof:snapshots[state.stage].asof,sourceHealth:state.health,view:state.tab,selectedEvidence:state.selected},privateContent:{...state}});
+          if (result && result.catch) result.catch(()=>{});
+        }
+      }
+      function renderSummary() {
+        const s = snapshots[state.stage];
+        const health = state.health==='failed' ? '模拟：此后检查接口超时。保留截至 '+s.asof+' 的快照，之后是否变化尚不清楚。' : state.health==='stale' ? '模拟：此后超过复核周期未成功更新。历史依据保留，当前情况需复核；不据此判断事件真伪。' : '';
+        byId('el-summary').innerHTML='<div class="el-snapshot"><div class="el-statusline"><span>进程：'+s.progress+'</span><span>证据：'+s.state+'</span><span>资料截至 '+s.asof+'</span></div><div class="el-current">'+s.title+'</div><div class="el-claims">'+s.claims.map(c=>'<div class="el-claim"><span>'+c[0]+'</span>'+cites(c[1])+'</div>').join('')+'</div><p class="el-gap">尚待核实：'+s.gap+'</p><p class="el-delta">本次变化 · '+s.delta+'</p></div>'+(health?'<div class="el-health" role="status">'+health+'</div>':'');
+      }
+      function renderEvidence() {
+        byId('el-list').innerHTML=documents.filter(d=>d.stage<=state.stage).map(d=>'<button type="button" class="el-material" data-evidence="'+d.id+'" aria-pressed="'+(state.selected===d.id)+'"><small>'+d.time+' · '+d.id+' · '+d.kind+'</small><span>'+(d.id==='S4' && state.stage>=3?'签署框架：10亿元（金额已更正）':d.title)+'</span></button>').join('');
+        const d=documents.find(d=>d.id===state.selected);
+        const replaced=d.id==='S4' && state.stage>=3;
+        const conditional=d.id==='S3' && state.stage===4;
+        byId('el-detail').innerHTML='<div class="el-detailhead"><h3>'+d.id+' · 证据核查</h3><span class="el-tag">'+d.kind+'</span></div><p class="el-detailtitle">'+d.source+'</p><p class="el-sub">原文定位：'+d.position+' · 版本 v1</p><blockquote class="el-quote">“'+escapeText(d.quote)+'”</blockquote><p class="el-reason">采用范围：'+d.reason+'</p><p class="el-reason">'+(replaced?'此版本金额字段已被S5更正，10亿元不作为当前有效上限。':conditional?'本框架继续有效的前提已改变；不能据此宣布整篇研报失效。':d.effect)+'</p><dl class="el-times"><div><dt>事件发生时间</dt><dd>'+d.happened+'</dd></div><div><dt>首次披露时间</dt><dd>'+d.published+'</dd></div><div><dt>系统抓取时间</dt><dd>'+d.retrieved+'</dd></div><div><dt>来源更新时间</dt><dd>'+d.updated+'</dd></div></dl>';
+      }
+      function renderConflict() {
+        if(state.stage===0) {
+          byId('el-conflicts').innerHTML='<h3>目前仅有单一传闻来源</h3><p class="el-reason">12篇同源转载不构成相互独立的核实；没有相反材料也不意味着主张成立。</p>'+cites(['S1']);
+          return;
+        }
+        let html='<h3>同一主张：截至11/02是否已签正式供货合同？</h3><div class="el-pair"><div><span class="el-tag">匿名说法 · 未核实</span><p>“已签20亿元正式供货订单”</p>'+cites(['S1'])+'</div><div><span class="el-tag">当事方否认 · 范围有限</span><p>“截至回应披露时，尚未签署该事项的正式采购合同”</p>'+cites(['S2'])+'</div></div><div class="el-rule">当前可采用的表述：公司否认截至回应时已签正式合同。是否曾洽谈、未来是否签署，仍需另行核实。</div>';
+        if(state.stage>=2) html+='<p class="el-reason">11/03签署框架与11/02否认已签正式采购合同，合同类型和时点均不同，不自动构成自相矛盾。</p>'+cites(['S2','S4']);
+        if(state.stage>=3) html+='<p class="el-reason">10亿元与1亿元属于明确更正关系：现时采用1亿元；回到11/03时，只呈现当时收录的10亿元披露。</p>'+cites(['S4','S5']);
+        if(state.stage===4) html+='<p class="el-reason">框架终止仅改变该框架的进程，不能推出所有业务停止或取消已生效采购。</p>'+cites(['S6']);
+        byId('el-conflicts').innerHTML=html;
+      }
+      function renderRelations() {
+        const direct=state.stage>=2;
+        const role=state.stage===4?'历史框架参与方':direct?'框架签署方':state.stage===1?'回应事项相关方':'传闻涉及方 · 待核实';
+        const material=state.stage===4?['S4','S6']:direct?['S4']:state.stage===1?['S2']:['S1'];
+        const explanation=state.stage===4?'本框架已经终止；不能据此推定双方不存在其他合作。':direct?'已披露双方框架关系。实际采购与履约尚未披露。':'仅确认材料如何提及甲乙，不能据此认定已形成合作。';
+        byId('el-relations').innerHTML='<div class="el-row"><div>示例甲公司 ↔ 示例乙公司<div class="el-role">'+role+'</div></div><div>'+explanation+cites(material)+'</div></div><div class="el-row"><div>示例丙公司<div class="el-role">历史供应商 · 本次参与待核实</div></div><div>合成关系材料R1称“截至2026/09/30，丙为甲的供应商”。这只支持历史业务关系，不能证明丙获得本次订单。<div class="el-role">R1 · 合成关系资料第2段 · 披露2026/10/01</div></div></div><p class="el-reason">'+(state.stage===4?'推断前提变化：该框架已终止，不能继续用它支持丙可能获得后续采购的假设。':'潜在传导假设：只有甲实际采购且向丙下单，才可能涉及丙；当前缺少这两段事件证据。')+'</p><div class="el-rule">关系证据与影响推断分开呈现；不把行业相关或供应商身份换算成股价方向。</div>';
+      }
+      function renderTabs() {
+        ['evidence','conflict','relation'].forEach(name=>{
+          byId('el-tab-'+name).setAttribute('aria-selected',String(state.tab===name));
+          byId('el-panel-'+name).hidden=state.tab!==name;
+        });
+      }
+      function render() {
+        byId('el-stage').value=String(state.stage);
+        byId('el-health').value=state.health;
+        renderSummary();renderEvidence();renderConflict();renderRelations();renderTabs();
+      }
+      root.addEventListener('click',event=>{
+        const evidence=event.target.closest('[data-evidence]');
+        if(evidence && root.contains(evidence)) {
+          const id=evidence.dataset.evidence;
+          if(!documents.some(d=>d.id===id && d.stage<=state.stage))return;
+          state.selected=id;state.tab='evidence';render();root.querySelector('.el-material[data-evidence="'+id+'"]').focus();save();return;
+        }
+        const tab=event.target.closest('[role="tab"]');
+        if(tab && root.contains(tab)) {state.tab=tab.id.slice('el-tab-'.length);renderTabs();save();}
+      });
+      root.addEventListener('keydown',event=>{
+        if(!event.target.matches('[role="tab"]') || !['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+        const tabs=Array.from(root.querySelectorAll('[role="tab"]'));
+        let index=tabs.indexOf(event.target);
+        index=event.key==='Home'?0:event.key==='End'?tabs.length-1:(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+        event.preventDefault();tabs[index].focus();tabs[index].click();
+      });
+      byId('el-stage').addEventListener('change',()=>{state.stage=Number(byId('el-stage').value);state.selected=snapshots[state.stage].selected;render();save();});
+      byId('el-health').addEventListener('change',()=>{state.health=byId('el-health').value;renderSummary();save();});
+      compatible(window.openai && window.openai.widgetState);render();
+      window.addEventListener('openai:set_globals',event=>{const globals=event.detail && event.detail.globals;if(globals && globals.widgetState){compatible(globals.widgetState);render();}});
+    })();
+  </script>
+</div>
+
+</body>
+</html>

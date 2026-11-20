@@ -1,0 +1,12 @@
+import http from 'node:http';
+import {pathToFileURL,fileURLToPath} from 'node:url';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+execFileSync(process.execPath,[path.join(root,'scripts/build.mjs')],{stdio:'inherit'});
+const {default:worker}=await import(pathToFileURL(path.join(root,'dist/server/index.js')));
+const port=Number(process.env.PORT||4173);
+const server=http.createServer(async(req,res)=>{try{const chunks=[];for await(const chunk of req)chunks.push(chunk);const body=Buffer.concat(chunks);const request=new Request(`http://127.0.0.1:${port}${req.url}`,{method:req.method,headers:req.headers,...(['GET','HEAD'].includes(req.method)?{}:{body})});const response=await worker.fetch(request,{OPENAI_API_KEY:process.env.OPENAI_API_KEY,OPENAI_MODEL:process.env.OPENAI_MODEL});res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));}catch(e){res.writeHead(500,{'content-type':'application/json'});res.end(JSON.stringify({error:e.message}));}});
+server.listen(port,'127.0.0.1',()=>console.log(`Local: http://127.0.0.1:${port}`));
+process.on('SIGTERM',()=>server.close());process.on('SIGINT',()=>server.close());

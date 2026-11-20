@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=p=>fs.readFile(path.join(root,p),'utf8');
+const engine=await read('src/engine.js');
+const data=JSON.parse(await read('data/evidence.json'));
+if(!Array.isArray(data.stocks)||!data.stocks.length)throw new Error('Verified evidence is required before build');
+const dataHash=crypto.createHash('sha256').update(JSON.stringify(data)).digest('hex');
+data.content_hash=dataHash;
+const assets={};
+for(const [url,file,type] of [['/','src/index.html','text/html;charset=utf-8'],['/app.js','src/app.js','text/javascript;charset=utf-8'],['/style.css','src/style.css','text/css;charset=utf-8'],['/engine.js','src/engine.js','text/javascript;charset=utf-8']])assets[url]={body:await read(file),type};
+assets['/index.html']=assets['/'];
+let worker=await read('src/worker.js');
+worker=worker.replace(/^import .*?;\n/gm,'').replace('normalizeDataset(datasetSource)',()=>`normalizeDataset(${JSON.stringify(data)})`).replace('__ASSETS__',()=>JSON.stringify(assets));
+const output=engine.replace(/^export /gm,'')+'\n'+worker;
+await fs.mkdir(path.join(root,'dist/server'),{recursive:true});await fs.writeFile(path.join(root,'dist/server/index.js'),output);
+try{await fs.mkdir(path.join(root,'dist/.openai'),{recursive:true});await fs.copyFile(path.join(root,'.openai/hosting.json'),path.join(root,'dist/.openai/hosting.json'));}catch(e){if(e.code!=='ENOENT')throw e;}
+await fs.writeFile(path.join(root,'dist/build-info.json'),JSON.stringify({snapshot_id:data.snapshot_id,data_hash:dataHash,stocks:data.stocks.length},null,2));
+console.log(`Built Worker: ${Buffer.byteLength(output)} bytes; ${data.stocks.length} verified stocks; data sha256 ${dataHash}`);

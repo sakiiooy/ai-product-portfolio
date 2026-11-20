@@ -1,0 +1,21 @@
+{
+  "project": "investment-event-lens",
+  "prepared_on": "2026-11-20",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2281,
+      "sha256": "9a8742253ada6313540b5a2c2d511d72939bdcbbda73246c1cf4b35b8f66e6e4"
+    },
+    {
+      "path": "index.html",
+      "bytes": 24490,
+      "sha256": "acfdfdcabf747aa978c4adf77fc486307a6eb3c9202ab3df15682dd2988efc08"
+    },
+    {
+      "path": "同花顺事件透镜_产品设计.md",
+      "bytes": 22466,
+      "sha256": "4db81a68c6b4411d74d3fb611bdabcc8d2f5e9b88db145f66cb59273e1315a9a"
+    }
+  ]
+}

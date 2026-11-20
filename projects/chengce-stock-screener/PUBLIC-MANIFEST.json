@@ -1,0 +1,254 @@
+{
+  "prepared_at": "2026-11-20",
+  "purpose": "GitHub public portfolio copy",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 84,
+      "sha256": "50ef11f41511aff5431c6f89d6c94701a0eb0cb5600a0a077265b52c9f4811dc"
+    },
+    {
+      "path": "00_交付说明.md",
+      "bytes": 4108,
+      "sha256": "2cae4425e0e961975a920f66a2faafb6f6e472bf775582fb645936d7ed58bbfa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3383,
+      "sha256": "920b58b1d3daf15c00fd31044d9f65b6d93bf761d5950a8daebe3fc93c39ddf3"
+    },
+    {
+      "path": "产品预览.png",
+      "bytes": 127191,
+      "sha256": "0ef1f36ba2a43230680084ed6d33e156cf5dd362dd8df378e99e0aa6578fac17"
+    },
+    {
+      "path": "导出示例/澄策_策略.json",
+      "bytes": 711,
+      "sha256": "ece44a8cd3a79a8b07d922f372c242c19233ef52a7feae45f804d20ac674e953"
+    },
+    {
+      "path": "导出示例/澄策_筛选证据.csv",
+      "bytes": 3926,
+      "sha256": "b6820d5602b645d7efda40fc71b3bfceec884400b4710d9e6ada825c2d8adfbc"
+    },
+    {
+      "path": "流程图/business-flow.drawio",
+      "bytes": 11871,
+      "sha256": "0c30faa3b9c0bc9f0779a4a99ff9092f5320a69976cdedaacef9dfbec19502f2"
+    },
+    {
+      "path": "流程图/business-flow.png",
+      "bytes": 460829,
+      "sha256": "e415aae6d40071ce8365f6fe912c5acc05fbfe3dac2a602dcc43e19edf2731b9"
+    },
+    {
+      "path": "流程图/product-flow.drawio",
+      "bytes": 10486,
+      "sha256": "e263d39cf4986793df6b70efbcc5a30c445da681c36c73aa06e382d585806727"
+    },
+    {
+      "path": "流程图/product-flow.png",
+      "bytes": 444877,
+      "sha256": "91eef61a856a9c0337f962af6e30b7ad501b0a00a5dff6560e1d6e7f5584d367"
+    },
+    {
+      "path": "源代码/.env.example",
+      "bytes": 128,
+      "sha256": "10298f276bed4c5f8e77288bef149e0f84e01cb178efde683c1164ad25285afb"
+    },
+    {
+      "path": "源代码/.gitignore",
+      "bytes": 56,
+      "sha256": "d62b0084e14257cd67eb4f067eb576574bf61dda808cf6c6f1425722b8b6f972"
+    },
+    {
+      "path": "源代码/AI_USAGE.md",
+      "bytes": 3850,
+      "sha256": "5164f6b2cab566492bfbb409d585ced22f7ca42acf4df33dbe4b97f20543e414"
+    },
+    {
+      "path": "源代码/README.md",
+      "bytes": 7287,
+      "sha256": "8e253061f4f7e3e26daed4e4692bb0dd0a767b3052f63275d4e911d83f6f08f5"
+    },
+    {
+      "path": "源代码/TESTING.md",
+      "bytes": 2956,
+      "sha256": "689fdfd6e5d15f1764c3639e7258af16c954b0901add2f13096dda9e70a7df80"
+    },
+    {
+      "path": "源代码/VERIFICATION.md",
+      "bytes": 3069,
+      "sha256": "27b1ec7254eae796d3d100fc456bc7809310914e1598f618a3244fd6ef6af3fc"
+    },
+    {
+      "path": "源代码/data/data-notes.md",
+      "bytes": 5645,
+      "sha256": "7fbbd54868c642191877ede0ac2dbe03094ceb21ab9af4f91cbf4c6e39852593"
+    },
+    {
+      "path": "源代码/data/evidence.json",
+      "bytes": 18234,
+      "sha256": "cfe400605cb387b459ff5af3e3237147e1923e4e194d80c4741768fd0705a162"
+    },
+    {
+      "path": "源代码/docs/01_PRD.md",
+      "bytes": 16153,
+      "sha256": "9db118841db06821bdb0e474b2cd0937d764a049f725fd9813c1cb9fec70285f"
+    },
+    {
+      "path": "源代码/docs/02_业务流程图.md",
+      "bytes": 4373,
+      "sha256": "bd2d8617489ecf01e573e67dfb53afdab78dbe47576d6df762dca0c4485c4841"
+    },
+    {
+      "path": "源代码/docs/03_产品流程图.md",
+      "bytes": 4462,
+      "sha256": "31665ad5e156dd7e215d19a030f8bd619c29dc33fa77822b452c38a4854ebef5"
+    },
+    {
+      "path": "源代码/docs/04_兜底与验收方案.md",
+      "bytes": 12372,
+      "sha256": "3d6e5f3f476d527d81fd438ac2d6b4e922623e2faaf16d90f6bac3f17f863fc6"
+    },
+    {
+      "path": "源代码/package.json",
+      "bytes": 284,
+      "sha256": "8871fcdfea7ca65dbd3f5cbe23b21bbbea63dffba6c98946efdbf537de785373"
+    },
+    {
+      "path": "源代码/scripts/audit_evidence.py",
+      "bytes": 1758,
+      "sha256": "9e79c0d729db02f0cbff33ed21699fff59810083fe3f7b38a90765ad82043077"
+    },
+    {
+      "path": "源代码/scripts/build.mjs",
+      "bytes": 1860,
+      "sha256": "d713ddfb2ced0e441ef488f432f58ec1fd5530306d8b95adfe3df915bab70cad"
+    },
+    {
+      "path": "源代码/scripts/dev.mjs",
+      "bytes": 1324,
+      "sha256": "e7e294bdee08ecd2f448f778b91796de702ffb29d2f7b8d47a7c71cd32ebf256"
+    },
+    {
+      "path": "源代码/src/app.js",
+      "bytes": 26834,
+      "sha256": "5fa76a096d156852438736aca73b39956da2d2cd275ec029226a9df5cec060c6"
+    },
+    {
+      "path": "源代码/src/engine.js",
+      "bytes": 12936,
+      "sha256": "6d45aa10dc4c1dbbc6800da5ea02fdfe37b99b43dd1e5ea34005b2aee6fddc82"
+    },
+    {
+      "path": "源代码/src/index.html",
+      "bytes": 6914,
+      "sha256": "6299115e9be822721e92fcc6d6c5c2d78f97da7d1914b1f77174c0a5c33a2d8c"
+    },
+    {
+      "path": "源代码/src/style.css",
+      "bytes": 18457,
+      "sha256": "1197368206c501e699674dc5e051c9f76f60dd60fe500a4291dc08e2f9bdd612"
+    },
+    {
+      "path": "源代码/src/worker.js",
+      "bytes": 6301,
+      "sha256": "98e0394d62309cc3aa1cbb751d501212a93e9f7cf88beda7894d64e328c8c61b"
+    },
+    {
+      "path": "源代码/tests/api.test.mjs",
+      "bytes": 3997,
+      "sha256": "7f831bdf067c7b504062ca5cf3427135ede0251d288cc0dd5439dde892c4d92e"
+    },
+    {
+      "path": "源代码/tests/engine.test.mjs",
+      "bytes": 6994,
+      "sha256": "f7cbcecbc508a976f95677da992ce27a7e084dbe5d89522ede951179d4f0db2b"
+    },
+    {
+      "path": "源代码/流程图/business-flow.drawio",
+      "bytes": 11871,
+      "sha256": "0c30faa3b9c0bc9f0779a4a99ff9092f5320a69976cdedaacef9dfbec19502f2"
+    },
+    {
+      "path": "源代码/流程图/business-flow.png",
+      "bytes": 460829,
+      "sha256": "e415aae6d40071ce8365f6fe912c5acc05fbfe3dac2a602dcc43e19edf2731b9"
+    },
+    {
+      "path": "源代码/流程图/product-flow.drawio",
+      "bytes": 10486,
+      "sha256": "e263d39cf4986793df6b70efbcc5a30c445da681c36c73aa06e382d585806727"
+    },
+    {
+      "path": "源代码/流程图/product-flow.png",
+      "bytes": 444877,
+      "sha256": "91eef61a856a9c0337f962af6e30b7ad501b0a00a5dff6560e1d6e7f5584d367"
+    },
+    {
+      "path": "设计文档/01_PRD.docx",
+      "bytes": 47959,
+      "sha256": "2f2cedf4d9797c250fb2b593e12c5622a80b8763dc99c0cca9f9f6234f9532b1"
+    },
+    {
+      "path": "设计文档/01_PRD.md",
+      "bytes": 16153,
+      "sha256": "9db118841db06821bdb0e474b2cd0937d764a049f725fd9813c1cb9fec70285f"
+    },
+    {
+      "path": "设计文档/02_业务流程图.docx",
+      "bytes": 389762,
+      "sha256": "ba529d6ea2f3286e5178fb35ad6305fc709878d65223000eb69bc04b95753218"
+    },
+    {
+      "path": "设计文档/02_业务流程图.md",
+      "bytes": 4373,
+      "sha256": "bd2d8617489ecf01e573e67dfb53afdab78dbe47576d6df762dca0c4485c4841"
+    },
+    {
+      "path": "设计文档/03_产品流程图.docx",
+      "bytes": 384358,
+      "sha256": "a5d6b193b7de4b07e24972bcea9618ebde6791df5ca1425400cf00301f142980"
+    },
+    {
+      "path": "设计文档/03_产品流程图.md",
+      "bytes": 4462,
+      "sha256": "31665ad5e156dd7e215d19a030f8bd619c29dc33fa77822b452c38a4854ebef5"
+    },
+    {
+      "path": "设计文档/04_兜底与验收方案.docx",
+      "bytes": 47318,
+      "sha256": "553c1d7452e0819edea6e10ac0e6e80d08fa2a5b486c42382d9e998b73fd994a"
+    },
+    {
+      "path": "设计文档/04_兜底与验收方案.md",
+      "bytes": 12372,
+      "sha256": "3d6e5f3f476d527d81fd438ac2d6b4e922623e2faaf16d90f6bac3f17f863fc6"
+    },
+    {
+      "path": "验证记录/AI_USAGE.md",
+      "bytes": 3850,
+      "sha256": "5164f6b2cab566492bfbb409d585ced22f7ca42acf4df33dbe4b97f20543e414"
+    },
+    {
+      "path": "验证记录/TESTING.md",
+      "bytes": 2956,
+      "sha256": "689fdfd6e5d15f1764c3639e7258af16c954b0901add2f13096dda9e70a7df80"
+    },
+    {
+      "path": "验证记录/VERIFICATION.md",
+      "bytes": 3069,
+      "sha256": "27b1ec7254eae796d3d100fc456bc7809310914e1598f618a3244fd6ef6af3fc"
+    },
+    {
+      "path": "验证记录/线上验证.md",
+      "bytes": 792,
+      "sha256": "8c7b60cf3800d57517eba6c8632c35873a299bb26a419246c86b8087bbd6ed73"
+    }
+  ],
+  "manifest_excludes_itself": true,
+  "target_repository": "sakiiooy/ai-product-portfolio",
+  "target_path": "projects/chengce-stock-screener"
+}

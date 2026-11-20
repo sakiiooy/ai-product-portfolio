@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');const I=require('./interactions.js'),P=require('./presentation.js');let n=0;
+const test=(name,fn)=>{fn();n++;console.log('PASS '+name)};
+test('文本发送按钮不代替用户原文，也不重复记录',()=>{assert.equal(I.describe('send',{},'发送问题'),null);assert.equal(I.describe('home_send',{},'发送问题'),null);assert.equal(I.describe('quick',{text:'我想调整面试时间'}),'我想调整面试时间');});
+test('时段选择、确认、重选、取消保留按钮含义',()=>{for(const label of ['选择第2个 · 14:30 KST','确认并提交改期申请','重新选择时间','取消草稿'])assert.equal(I.describe('conversation',{command:'x'},label),label);});
+test('偏好保存记录完整日期时间和时区',()=>{const r=I.describe('save_preferences',{},'',{date:'2026-11-05',period:'09:00–12:00',timezone:'Asia/Seoul'});assert.match(r,/2026-11-05/);assert.match(r,/09:00–12:00/);assert.match(r,/KST/);});
+test('每种业务操作都有可读事件内容',()=>{for(const a of ['query','profile','messages','contact','preferences','reminders','reschedule_start','edit_followup','submit_followup','followup_record','copy_followup','confirm_clear'])assert.ok(I.describe(a).length>2);});
+test('表单编辑记录最终正文而非每个按键',()=>{assert.equal(I.changed('chatInput','abc'),null);assert.match(I.changed('followupText','新的咨询内容'),/新的咨询内容/);assert.match(I.changed('prefTimezone','Asia/Shanghai'),/北京时间/);});
+test('关闭和导航动作表达清楚',()=>{assert.equal(I.describe('nav',{view:'reschedule'}),'打开面试改期');assert.equal(I.describe('close',{},'',{},{title:'面试详情'}),'关闭面试详情窗口');});
+test('测试入口在候选人回复中移除',()=>{const r=P.publicReply({text:'已查询当前记录。',actions:[{label:'体验查询失败兜底',action:'conversation',payload:{command:'query_failure'}},{label:'查看面试详情',action:'interview_details'}]});assert.equal(r.actions.length,1);assert.equal(r.actions[0].label,'查看面试详情');});
+test('内部回执不包装为真实提交成功',()=>{const r=P.publicReply({text:'已提交进度跟进。\n本地演练回执：LOCAL-EXERCISE-FOLLOWUP-1',actions:[]});assert.match(r.text,/尚未取得/);assert.ok(!r.text.includes('LOCAL-'));assert.ok(!r.text.includes('已提交进度跟进'));});
+test('内部批准不包装为真实改期成功',()=>{const r=P.publicReply({text:'改期成功啦！\n本地演练回执：LOCAL-EXERCISE-RS-1',actions:[]});assert.match(r.text,/尚未取得/);assert.ok(!r.text.includes('改期成功'));});
+test('已有真实回执的话术保留原有事实',()=>{const r=P.publicReply({text:'改期已确认，新时间为11月5日14:30。',actions:[]});assert.equal(r.text,'改期已确认，新时间为11月5日14:30。');assert.equal(P.receiptText('CAU-CONFIRMED-123'),'CAU-CONFIRMED-123');});
+test('旧体验数据不会恢复为候选人真实安排',()=>{const s=P.sanitizeState({phase:'result',interview:{receipt:'LOCAL-EXERCISE-1'},result:{receipt:'MOCK-RESULT'},followup:{receipt:'LOCAL-X',status:'submitted'}});assert.equal(s.interview,null);assert.equal(s.result,null);assert.equal(s.followup.receipt,null);assert.equal(s.phase,'awaiting_interview');});
+console.log(n+' presentation and interaction suites passed');

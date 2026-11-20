@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="将自然语言选股意图转成可检查、可修改、可执行的数据条件。基于可追溯的公开年报历史样本。"><title>澄策 · 自然语言选股工作台</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar"><a class="brand" href="/" aria-label="澄策首页"><span class="brand-symbol">澄</span><span>澄策<small>把每个条件说清楚</small></span></a><div class="workspace-label">研究工作台</div><nav><button class="nav-item active" data-view="workspace"><span>▦</span> 意图选股</button><button class="nav-item" data-view="saved"><span>▤</span> 我的策略 <b id="saved-count">0</b></button><button class="nav-item" data-view="data"><span>◈</span> 数据与口径</button></nav><div class="sidebar-bottom"><span class="source-label">公开披露 · 历史样本</span><p>让判断回到数据<br>让条件始终由你确认</p><small>研究辅助工具<br>不构成投资建议</small></div></aside>
+<main>
+<header class="topbar"><div class="breadcrumb">研究工作台 <span>/</span> <strong id="page-name">意图选股</strong></div><span class="mode-pill" id="engine-mode">本地解析可用</span><div class="mobile-top-nav"><button class="text-button" data-view="workspace">选股</button><button class="text-button" data-view="saved">策略</button></div><div class="avatar">研</div></header>
+<div class="page-content">
+<section id="workspace-view">
+<div class="page-title"><div><div class="eyebrow">NATURAL LANGUAGE SCREENING</div><h1>把投资想法，变成可检查的条件</h1><p>你描述意图，我们展开规则。每一次入选，都有数据可循。</p></div><button class="button quiet" id="save-strategy">保存策略</button></div>
+<div class="snapshot-banner"><span class="banner-icon">◷</span><div><strong id="snapshot-heading">2024年报公开披露样本</strong><span id="snapshot-summary">正在加载真实数据证据…</span></div><button class="text-button" data-view="data">查看数据说明</button></div>
+<section class="panel intent-panel" aria-labelledby="intent-title"><div class="section-heading"><h2 id="intent-title"><span class="step">1</span> 描述选股意图</h2><span class="subtle">只筛选你确认的条件</span></div><label for="intent" class="sr-only">选股意图</label><textarea id="intent" rows="2" maxlength="1500">经营改善，营收和归母净利同比至少5%</textarea><div class="intent-footer"><div class="examples"><span>试一试</span><button data-example="经营改善，营收和归母净利同比至少5%">经营改善</button><button data-example="经营改善、估值合理、走势相对稳定">合理估值与稳定走势</button><button data-example="营业收入同比大于10%，归母净利润同比至少15%">明确财务阈值</button></div><button class="button primary" id="parse-intent">解析为条件</button></div><div id="parse-feedback" class="feedback" aria-live="polite"></div></section>
+<section class="panel conditions-panel" aria-labelledby="conditions-title"><div class="section-heading"><h2 id="conditions-title"><span class="step">2</span> 检查并修改条件 <span class="small-count" id="rule-count">2</span></h2><div class="rule-logic">全部满足 <strong>AND</strong></div></div><div class="conditions-info"><span>建议条件须由你确认</span><span>报告期：2024年度</span></div><div id="rules" class="rules"></div><div id="rule-errors" class="feedback" role="alert"></div><div class="conditions-footer"><button class="text-button" id="add-rule">＋ 添加条件</button><label class="confirm-label"><input type="checkbox" id="confirm-rules">我已检查条件及历史样本范围</label><button class="button primary" id="run-screen">确认条件并筛选</button></div></section>
+<section id="impact-section" class="impact-section" hidden><div><span class="impact-icon">≋</span><strong>条件变化会带来什么影响</strong><span id="impact-summary"></span></div><button class="text-button" id="show-impact">展开变化</button><div id="impact-detail" hidden></div></section>
+<section class="panel results-panel" aria-labelledby="results-title"><div class="section-heading"><div><h2 id="results-title"><span class="step">3</span> 检查筛选结果</h2><p class="results-caption" id="results-caption">执行后显示入选、排除与待核验证据</p></div><div class="result-actions"><button class="button quiet" id="compare" disabled>比较 <span id="compare-count">0</span>/3</button><button class="button quiet" id="export-csv" disabled>导出结果</button></div></div><div class="tabs" role="tablist"><button role="tab" aria-selected="true" class="tab active" data-status="PASS">入选 <b id="count-PASS">—</b></button><button role="tab" aria-selected="false" class="tab" data-status="FAIL">排除 <b id="count-FAIL">—</b></button><button role="tab" aria-selected="false" class="tab" data-status="UNKNOWN">待核验 <b id="count-UNKNOWN">—</b></button></div><div id="results" class="result-content"><div class="empty-state"><div class="empty-symbol">⌕</div><h3>先确认规则，再查看候选</h3><p>系统会逐条展示每只股票满足或未满足的条件。</p></div></div><div class="results-bottom"><span>按股票代码排序，不是投资推荐排名</span><span id="result-snapshot">固定历史快照</span></div></section>
+<p class="disclaimer">所有结果仅反映样本在所列口径下是否满足条件。历史表现不代表未来表现；不提供确定性涨跌预测、收益承诺或直接买卖建议。</p>
+</section>
+<section id="saved-view" hidden><div class="page-title"><div><div class="eyebrow">SAVED STRATEGIES</div><h1>我的策略</h1><p>保存的是条件与快照编号，便于继续检查和复现。</p></div><button class="button quiet" id="export-strategies">导出全部策略</button></div><div class="snapshot-banner"><span>浏览器本地保存 · 不跨设备同步 · 清理浏览器可能丢失，请导出备份</span></div><div id="saved-list"></div></section>
+<section id="data-view" hidden><div class="page-title"><div><div class="eyebrow">DATA & METHODOLOGY</div><h1>每个数字，都能回到原文</h1><p>查看样本范围、报告口径、原始披露与当前能力边界。</p></div></div><div id="data-details"></div></section>
+</div>
+</main>
+</div>
+<div id="toast" class="toast" role="status" hidden></div><div id="overlay" class="overlay" hidden></div><aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden></aside><div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden></div>
+<script type="module" src="/app.js"></script>
+</body></html>
